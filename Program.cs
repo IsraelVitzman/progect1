@@ -13,7 +13,7 @@ namespace Exercise
         {
             if (isEmpty())
             {
-                Console.WriteLine("isEmpty! plese enter number ");
+                
                 return;
             }
             if (!isNumber(add))
@@ -193,6 +193,7 @@ namespace Exercise
 
         static void Main(string[] args)
         {
+           
             Program program = new Program();
             bool continueRunning = true;
 
@@ -240,6 +241,11 @@ namespace Exercise
 
                     case "2":
                         Console.WriteLine("the list ...:");
+                        if (program.isEmpty())
+                        {
+                            Console.WriteLine("is empty");
+                            return;
+                        }
                         foreach (int item in program.list)
                         {
                             Console.WriteLine(item);
