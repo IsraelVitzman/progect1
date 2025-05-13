@@ -89,27 +89,33 @@ namespace Exercise
         
         public void sort()
         {
+            List<int> sortlist = new List<int>();
+            int temp = 0;
+
             if (isEmpty())
             {
                 Console.WriteLine("isEmpty! plese enter number ");
                 return;
             }
-            int temp = 0;
+            foreach (int item in list)
+            {
+                sortlist.Add(item);
+            }
             
-            for (int i = 0; i < list.Count -1; i++)
+            for (int i = 0; i <sortlist.Count -1; i++)
             { 
-                for (int j = 0; j<list.Count-1-i; j++)
+                for (int j = 0; j<sortlist.Count-1-i; j++)
                 {
-                    if (list[j] > list[j + 1])
+                    if (sortlist[j] > sortlist[j + 1])
                     {
-                        temp = list[j];
-                        list[j] = list[j + 1];
-                        list[j + 1] = temp;
+                        temp = sortlist[j];
+                        sortlist[j] = sortlist[j + 1];
+                        sortlist[j + 1] = temp;
                     }
                 }
             }
             Console.WriteLine("sort the list:");
-            foreach (int item in list)
+            foreach (int item in sortlist)
             {
                 Console.WriteLine(item);
             }
@@ -247,34 +253,42 @@ namespace Exercise
 
 
                     case "2":
+                        Console.WriteLine("");
                         program.returnd();
                         break;
 
                     case "3":
+                        Console.WriteLine("");
                         program.reversToNumber();
                         break;
 
                     case "4":
+                        Console.WriteLine("");
                         program.sort();
                         break;
 
                     case "5":
+                        Console.WriteLine("");
                         program.maxNumber();
                         break;
 
                     case "6":
+                        Console.WriteLine("");
                         program.minNumber();
                         break;
 
                     case "7":
+                        Console.WriteLine("");
                         program.avergeNumber();
                         break;
 
                     case "8":
+                        Console.WriteLine("");
                         program.somElements();
                         break;
 
                     case "9":
+                        Console.WriteLine("");
                         program.somNumber();
                         break;
 
