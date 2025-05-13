@@ -1,0 +1,27 @@
+# Build results
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.cache
+
+# Rider
+.idea/
+
+# Logs
+*.log
+
+# Debug
+*.pdb
+
+# Secrets and config overrides
+secrets.json
+appsettings.Production.json
+appsettings.Development.json
+
+# System
+.DS_Store
+Thumbs.db
