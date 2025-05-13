@@ -11,11 +11,7 @@ namespace Exercise
         
         public void addToList(string add)
         {
-            if (isEmpty())
-            {
-                
-                return;
-            }
+            
             if (!isNumber(add))
             {
                 Console.WriteLine("enter num bitwine 0-9");
@@ -63,7 +59,19 @@ namespace Exercise
             }
             return true;
         }
-
+        public void returnd()
+        {
+            if (isEmpty())
+            {
+                Console.WriteLine("isEmpty! plese enter number ");
+                return;
+            }
+            foreach (int item in list)
+            {
+                Console.WriteLine(item);
+            }
+            
+        }
         
         public void reversToNumber()
         {
@@ -87,6 +95,7 @@ namespace Exercise
                 return;
             }
             int temp = 0;
+            
             for (int i = 0; i < list.Count -1; i++)
             { 
                 for (int j = 0; j<list.Count-1-i; j++)
@@ -237,19 +246,8 @@ namespace Exercise
                         break;
 
 
-                        
-
                     case "2":
-                        Console.WriteLine("the list ...:");
-                        if (program.isEmpty())
-                        {
-                            Console.WriteLine("is empty");
-                            return;
-                        }
-                        foreach (int item in program.list)
-                        {
-                            Console.WriteLine(item);
-                        }
+                        program.returnd();
                         break;
 
                     case "3":
